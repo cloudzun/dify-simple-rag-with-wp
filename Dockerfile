@@ -1,6 +1,9 @@
 # 使用 Go 1.22.2 作为基础镜像
 FROM golang:1.22.2-bullseye
 
+# 设置 Go module 代理
+ENV GOPROXY=https://goproxy.cn,direct
+
 # 在容器内部创建工作目录
 WORKDIR /app
 
