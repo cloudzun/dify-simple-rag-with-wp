@@ -20,7 +20,7 @@ type Article struct {
 
 func GetArticle(id int) (string, error) {
 	client := &http.Client{}
-	req, err := http.NewRequest("GET", fmt.Sprintf("http://10.11.12.90:8083/?rest_route=/wp/v2/posts/%d", id), nil)
+	req, err := http.NewRequest("GET", fmt.Sprintf("http://172.17.0.1:8083/?rest_route=/wp/v2/posts/%d", id), nil)
 	if err != nil {
 		return "", err
 	}
